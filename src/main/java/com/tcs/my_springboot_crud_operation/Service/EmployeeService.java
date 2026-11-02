@@ -33,5 +33,22 @@ public class EmployeeService {
 		return optional;
 	}
 	
+	 public Optional<Employee> findByEmailService(String email){
+		 
+		 
+	    return employeeRepository.findByEmail(email);
+	
+	    	
+	    }
+	 
+	 public boolean deleteEmployeeBySalaryService(Double salary) {
+		 
+		 if(employeeRepository.existsBySalary(salary)) {
+			 employeeRepository.deleteBySalary(salary);
+			 return true;
+		 }
+		 return false;
+	 }
+	
 
 }

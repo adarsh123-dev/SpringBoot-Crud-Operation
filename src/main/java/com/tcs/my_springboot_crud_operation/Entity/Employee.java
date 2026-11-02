@@ -1,6 +1,6 @@
 package com.tcs.my_springboot_crud_operation.Entity;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
@@ -11,7 +11,6 @@ import lombok.Data;
 
 @Data  
 @Entity
-@JsonPropertyOrder({"id","name","email","phone","salary"})
 @Schema(description = "this is an entity class which is connected with db table so becareful while passing data")
 public class Employee {
 	  @Id
@@ -19,6 +18,7 @@ public class Employee {
 	private Integer id;
 	private String name;
 	private String email;
+	private Double salary;
 
 
 }
